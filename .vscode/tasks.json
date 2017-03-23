@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "bazel build",
+            "command": "bazel",
+            "args": ["build", "main:cpp_algorithms", "--verbose_failures"],
+            "isShellCommand": true
+        },
+        {
+            "taskName": "bazel run",
+            "command": "./bazel-bin/main/cpp_algorithms",
+            "isShellCommand": true
+        }
+    ]
+}
