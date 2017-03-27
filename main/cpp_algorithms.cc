@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
-//#include "sort/sort_algorithms.h"
-//#include "questions/questions.h"
+#include "sort/sort_algorithms.h"
+#include "questions/questions.h"
 
 using namespace std;
 
@@ -28,10 +28,8 @@ int main(int argc, char** argv) {
 
     // should be 1, 1, 3, 3, 4, 5, 7, 7, 8, 9, 14, 21, 23, 25, 25, 45, 45, 45, 56, 63, 65, 74, 89, 96, 1011
     
-    //FindMaximumSubArrayRecursive fmsr = FindMaximumSubArrayRecursive();
-    //fmsr.process();
-
-    int a = 5;
+    FindMaximumSubArrayRecursive fmsr = FindMaximumSubArrayRecursive();
+    fmsr.process();
 
     return 0;
 }

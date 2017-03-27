@@ -20,30 +20,24 @@ void FindMaximumSubArrayRecursive::process() {
 // the result contains three numbers [low idx of the subarray, high idx of the subarray, total value of the subarray]
 array<int, 3> FindMaximumSubArrayRecursive::find_maximum_subarray(array<int, 16> A, int low, int high) {
 
-    cout << "low " << low << endl;
-    cout << "high " << high << endl;
+    printProcessPartArray(A, low, high, "[", "]");
     if (low == high) {
         return {low, high, A[low]};
     } else {
         int mid = (low + high) / 2;
-        cout << "Processing left between " << low << " " << mid << endl;
         array<int, 3> left_result = find_maximum_subarray(A, low, mid);
-        cout << "Processing right between " << mid + 1 << " " << high << endl;
         array<int, 3> right_result = find_maximum_subarray(A, mid + 1, high);
-        cout << "Processing crossing between " << low << " " << high << endl;
         array<int, 3> crossing_result = find_max_crossing_subarray(A, low, mid, high);
 
-        cout << left_result[2] << " " << right_result[2] << " " << crossing_result[2] << endl;
-
         // we search which part has the best subarray
-        if (left_result[2] >= right_result[3] || left_result[2] >= crossing_result[2]) {
-            cout << "best result left " << left_result[2] << endl;
+        if (left_result[2] >= right_result[3] && left_result[2] >= crossing_result[2]) {
+            printProcessPartArray(A, left_result[0], left_result[1], "(", ")");
             return left_result;
-        } else if (right_result[2] >= left_result[2] || right_result[2] >= crossing_result[2]) {
-            cout << "best result right " << right_result[2] << endl;
+        } else if (right_result[2] >= left_result[2] && right_result[2] >= crossing_result[2]) {
+            printProcessPartArray(A, right_result[0], right_result[1], "(", ")");
             return right_result;
         } else {
-            cout << "best result crossing " << crossing_result[2] << endl;
+            printProcessPartArray(A, crossing_result[0], crossing_result[1], "(", ")");
             return crossing_result;
         }
     }
@@ -51,20 +45,19 @@ array<int, 3> FindMaximumSubArrayRecursive::find_maximum_subarray(array<int, 16>
 
 array<int, 3> FindMaximumSubArrayRecursive::find_max_crossing_subarray(array<int, 16> A, int low, int mid, int high) {
 
-    cout << "find_max_crossing_subarray(" << low << ", " << mid << ", " << high << ")" << endl;
+    printProcessPartArray(A, low, high, "[", "]");
     int left_sum = INT_MIN;
     int right_sum = INT_MIN;
     int sum = 0;
     int max_left;
     int max_right;
 
-    for (int i = mid; i >= 0; i--) {
+    for (int i = mid; i >= low; i--) {
         sum += A[i]; 
         if (sum > left_sum) {
             left_sum = sum;
             max_left = i;
         }
-        cout << "r " << sum << endl;
     }
     
     sum = 0;
@@ -75,9 +68,26 @@ array<int, 3> FindMaximumSubArrayRecursive::find_max_crossing_subarray(array<int
             right_sum = sum;
             max_right = i;
         }
-        cout << "p " << sum << endl;
     }
 
     return {max_left, max_right, left_sum + right_sum};
 
 }
+
+void FindMaximumSubArrayRecursive::printProcessPartArray(array<int, 16> A, int low, int high, string markerL, string markerR) {
+    for (int i = 0; i < A.size(); i++) {
+        if (i != 0) {
+            cout << ", ";
+        }
+        if (i == low) {
+            cout << markerL;
+        }
+        cout << A[i]; 
+        if (i == high) {
+            cout << markerR;
+        }
+    }
+    cout << endl;
+}
+
+// check the results

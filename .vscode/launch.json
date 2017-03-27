@@ -5,7 +5,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/a.out",
+            "program": "${workspaceRoot}/bazel-bin/main/cpp_algorithms",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
