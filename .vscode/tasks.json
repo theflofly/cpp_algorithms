@@ -4,7 +4,13 @@
         {
             "taskName": "bazel build",
             "command": "bazel",
-            "args": ["build", "main:cpp_algorithms", "--verbose_failures"],
+            "args": [
+                "build", 
+                "-c",
+                "dbg",
+                "main:cpp_algorithms", 
+                "--verbose_failures"
+                ],
             "isShellCommand": true
         },
         {
