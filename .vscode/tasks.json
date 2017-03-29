@@ -15,7 +15,11 @@
         },
         {
             "taskName": "bazel run",
-            "command": "./bazel-bin/main/cpp_algorithms",
+            "command": "bazel",
+            "args": [
+                "run", 
+                "main:cpp_algorithms"
+                ],
             "isShellCommand": true
         }
     ]

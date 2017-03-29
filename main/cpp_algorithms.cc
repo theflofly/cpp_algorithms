@@ -6,6 +6,27 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+
+    int menu;
+    int subMenu;
+
+    cout << "1 - Sorting algorithm" << endl;
+    cout << "2 - Interview question" << endl;
+
+    cin >> menu;
+
+    switch(menu) {
+        case 1:
+            cout << "1 - Insertion sort" << endl;
+            cout << "2 - Merge sort" << endl;
+            cout << "3 - Bubble sort" << endl;
+            break;
+        case 2:
+            cout << "1 - Find maximum sub array recursive" << endl;
+            break;
+    }
+
+    cin >> subMenu;
     
     //int input[25] = { 9, 7, 5, 3, 1, 45, 4, 7, 1011, 21, 89, 45, 14, 56, 8, 3, 45, 65, 25, 74, 1, 23, 25, 96, 63};
     

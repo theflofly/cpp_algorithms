@@ -21,7 +21,8 @@ My goal is to improve my C++ skills and remain seasoned with regard to algorithm
 
 ## questions
 
-* Find maximum sub array recursive (in progress)
+* Find maximum sub array recursive
+* Matrix rotation (in progress)
 
 # Build
 
@@ -39,17 +40,29 @@ If you are using Visual Studio Code, there are two predefined tasks to build and
         {
             "taskName": "bazel build",
             "command": "bazel",
-            "args": ["build", "main:cpp_algorithms", "--verbose_failures"],
+            "args": [
+                "build", 
+                "-c",
+                "dbg",
+                "main:cpp_algorithms", 
+                "--verbose_failures"
+                ],
             "isShellCommand": true
         },
         {
             "taskName": "bazel run",
-            "command": "./bazel-bin/main/cpp_algorithms",
+            "command": "bazel",
+            "args": [
+                "run", 
+                "main:cpp_algorithms"
+                ],
             "isShellCommand": true
         }
     ]
 }
 ```
+The "bazel build" task builds with the debug symbols, "bazel run" build and run the executable. On Mac OSX bazel does not add the debug symbols because of a bug.
+
 You can easily map these tasks to keymaps by going into: File > Preferences > Keyboard Shortcuts and pasting the following json payload into the keybindings.json file opened on the right of vscode.
 ```
 [
@@ -62,10 +75,15 @@ You can easily map these tasks to keymaps by going into: File > Preferences > Ke
         "key": "ctrl+r",
         "command": "workbench.action.tasks.runTask",
         "args": "bazel run"
+    },
+    { 
+        "key": "ctrl+d",               
+        "command": "workbench.action.debug.run",
+        "when": "!inDebugMode" 
     }
 ]
 ```
-Then Ctrl+b to build and Ctrl+r to run.
+Then Ctrl+b to build, Ctrl+r to run and Ctrl+d to start a debugging session.
 
 # Issues
 

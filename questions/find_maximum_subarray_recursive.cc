@@ -1,7 +1,4 @@
 
-// make a header file using a template for sort
-// build using bazel
-
 #include <array>
 #include <iostream>
 #include <climits>
@@ -30,7 +27,7 @@ array<int, 3> FindMaximumSubArrayRecursive::find_maximum_subarray(array<int, 16>
         array<int, 3> crossing_result = find_max_crossing_subarray(A, low, mid, high);
 
         // we search which part has the best subarray
-        if (left_result[2] >= right_result[3] && left_result[2] >= crossing_result[2]) {
+        if (left_result[2] >= right_result[2] && left_result[2] >= crossing_result[2]) {
             printProcessPartArray(A, left_result[0], left_result[1], "(", ")");
             return left_result;
         } else if (right_result[2] >= left_result[2] && right_result[2] >= crossing_result[2]) {
@@ -89,5 +86,3 @@ void FindMaximumSubArrayRecursive::printProcessPartArray(array<int, 16> A, int l
     }
     cout << endl;
 }
-
-// check the results
