@@ -22,7 +22,8 @@ My goal is to improve my C++ skills and remain seasoned with regard to algorithm
 ## questions
 
 * Find maximum sub array recursive
-* Matrix rotation (in progress)
+* Matrix rotation 90°
+* Matrix rotation by n element (in progress)
 
 # Build
 

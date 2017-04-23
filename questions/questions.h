@@ -16,7 +16,8 @@ class RotateMatrix {
     public:
         void process();
     private:
-        void rotateMatrix(int**input, size_t N);
+        void rotateMatrix(int **input, size_t N);
+        void printMatrix(int **input, size_t N);
 };
 
 #endif
