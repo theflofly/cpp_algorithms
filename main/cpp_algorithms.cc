@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     int menu = 2;
-    int subMenu = 2;
+    int subMenu = 3;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -24,6 +24,7 @@ int main(int argc, char** argv) {
         case 2:
             cout << "1 - Find maximum sub array recursive" << endl;
             cout << "2 - Rotate a matrix by 90°" << endl;
+            cout << "3 - Rotate a matrix by N loop" << endl;
             break;
     }
 
@@ -57,8 +58,13 @@ int main(int argc, char** argv) {
                     fmsr.process();
                     break; }
                 case 2: {
-                    RotateMatrix rotateMatrix = RotateMatrix();
-                    rotateMatrix.process();
+                    RotateMatrix90 rotateMatrix90 = RotateMatrix90();
+                    rotateMatrix90.process();
+                    break;
+                }
+                case 3: {
+                    RotateMatrixN rotateMatrixN = RotateMatrixN();
+                    rotateMatrixN.process();
                     break;
                 }
             }

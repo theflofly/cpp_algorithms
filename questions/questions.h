@@ -12,11 +12,19 @@ class FindMaximumSubArrayRecursive {
         void printProcessPartArray(array<int, 16> A, int low, int high, string markerL, string markerR);
 };
 
-class RotateMatrix {
+class RotateMatrix90 {
     public:
         void process();
     private:
-        void rotateMatrix(int **input, size_t N);
+        void rotateMatrix90(int **input, size_t N);
+        void printMatrix(int **input, size_t N);
+};
+
+class RotateMatrixN {
+    public:
+        void process();
+    private:
+        void rotateMatrixK(int **input, size_t N, int k);
         void printMatrix(int **input, size_t N);
 };
 

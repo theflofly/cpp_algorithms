@@ -18,12 +18,13 @@ My goal is to improve my C++ skills and remain seasoned with regard to algorithm
 * Bubble sort
 * Insertion sort
 * Merge sort
+* Radix sort (in progress)
 
 ## questions
 
 * Find maximum sub array recursive
 * Matrix rotation 90°
-* Matrix rotation by n element (in progress)
+* Matrix rotation by k elements (with matrix to circle)
 
 # Build
 
