@@ -7,8 +7,8 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    int menu = 2;
-    int subMenu = 3;
+    int menu = 1;
+    int subMenu = 4;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -20,6 +20,7 @@ int main(int argc, char** argv) {
             cout << "1 - Insertion sort" << endl;
             cout << "2 - Merge sort" << endl;
             cout << "3 - Bubble sort" << endl;
+            cout << "4 - Radix sort binary" << endl;
             break;
         case 2:
             cout << "1 - Find maximum sub array recursive" << endl;
@@ -40,15 +41,23 @@ int main(int argc, char** argv) {
                 case 1: {
                     InsertionSort insertionSort = InsertionSort();
                     insertionSort.sort(input, 25);
-                    break; }
+                    break; 
+                }
                 case 2: {
                     MergeSort mergeSort = MergeSort();
                     mergeSort.sort(input, 25);
-                    break; }
+                    break; 
+                }
                 case 3: {
                     BubbleSort bubbleSort = BubbleSort();
                     bubbleSort.sort(input, 25);
-                    break; }
+                    break; 
+                }
+                case 4: {
+                    RadixSortBinary radixSortBinary = RadixSortBinary();
+                    radixSortBinary.sort(input, 25);
+                    break;
+                }
             }
             break; }
         case 2: {

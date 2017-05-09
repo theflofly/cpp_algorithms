@@ -12,11 +12,18 @@ class MergeSort: public Sort {
         void merge(int input[], int p, int q, int r);
         void mergeSort(int input[], int p, int r);
 };
+
 class InsertionSort: public Sort {
     public:
         void sort(int input[], int size);
 };
+
 class BubbleSort: public Sort {
+    public:
+        void sort(int input[], int size);
+};
+
+class RadixSortBinary: public Sort {
     public:
         void sort(int input[], int size);
 };

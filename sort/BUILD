@@ -3,7 +3,8 @@ cc_library(
     srcs = [
         "bubble_sort.cc",
         "insertion_sort.cc",
-        "merge_sort.cc"
+        "merge_sort.cc",
+        "radix_sort_binary.cc"
         ],
     hdrs = [
         "sort_algorithms.h",
