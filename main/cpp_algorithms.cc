@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     int menu = 1;
-    int subMenu = 4;
+    int subMenu = 0;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -17,6 +17,7 @@ int main(int argc, char** argv) {
 
     switch(menu) {
         case 1:
+            cout << "0 - Benchmark" << endl;
             cout << "1 - Insertion sort" << endl;
             cout << "2 - Merge sort" << endl;
             cout << "3 - Bubble sort" << endl;
@@ -38,6 +39,23 @@ int main(int argc, char** argv) {
     switch (menu) {
         case 1: {
             switch (subMenu) {
+                case 0: {
+
+                    int M = 100000000;
+                    int *long_array = new int[M];
+                    for ( int i = 0; i < M; ++i ) {
+                        long_array[i] = (i*15354943) & 65535;
+                    }
+
+                    int t = time(0);
+
+                    RadixSortBinary radixSortBinary = RadixSortBinary();
+                    radixSortBinary.sort(long_array, M);
+
+                    cout << "RadixSortBinary: " << time(0) - t << endl;
+
+                    delete [] long_array;
+                }
                 case 1: {
                     InsertionSort insertionSort = InsertionSort();
                     insertionSort.sort(input, 25);

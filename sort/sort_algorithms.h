@@ -26,6 +26,8 @@ class BubbleSort: public Sort {
 class RadixSortBinary: public Sort {
     public:
         void sort(int input[], int size);
+    private:
+        void binarySplit(int *inputStart, int *inputEnd, int maxMask);
 };
 
 #endif
