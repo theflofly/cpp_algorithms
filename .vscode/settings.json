@@ -35,6 +35,7 @@
         "locale": "cpp",
         "system_error": "cpp",
         "tuple": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "valarray": "cpp"
     }
 }

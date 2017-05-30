@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     int menu = 1;
-    int subMenu = 0;
+    int subMenu = 4;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -34,14 +34,14 @@ int main(int argc, char** argv) {
 
     cout << "Selected: " << menu << " " << subMenu << endl;  
 
-    int input[25] = { 9, 7, 5, 3, 1, 45, 4, 7, 1011, 21, 89, 45, 14, 56, 8, 3, 45, 65, 25, 74, 1, 23, 25, 96, 63};
+    int input[25] = { 9, 7, 5, 3, 1, 45, 4, 7, 1011, 21, 89, 45, 14, 56, 8, 3, 45, 65, 25, 74, 1, 23, 96, 25, 63};
 
     switch (menu) {
         case 1: {
             switch (subMenu) {
                 case 0: {
 
-                    int M = 100000000;
+                    int M = 200000000;
                     int *long_array = new int[M];
                     for ( int i = 0; i < M; ++i ) {
                         long_array[i] = (i*15354943) & 65535;
