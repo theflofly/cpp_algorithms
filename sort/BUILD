@@ -4,7 +4,8 @@ cc_library(
         "bubble_sort.cc",
         "insertion_sort.cc",
         "merge_sort.cc",
-        "radix_sort_binary.cc"
+        "fastbit_radix_sort.cc",
+        "american_flag_sort.cc"
         ],
     hdrs = [
         "sort_algorithms.h",

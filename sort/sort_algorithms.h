@@ -23,11 +23,16 @@ class BubbleSort: public Sort {
         void sort(int input[], int size);
 };
 
-class RadixSortBinary: public Sort {
+class FastbitRadixSort: public Sort {
     public:
         void sort(int input[], int size);
     private:
         void binarySplit(int *inputStart, int *inputEnd, int maxMask);
+};
+
+class AmericanFlagSort: public Sort {
+    public:
+        void sort(int input[], int size);
 };
 
 #endif

@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     int menu = 1;
-    int subMenu = 4;
+    int subMenu = 5;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -21,7 +21,8 @@ int main(int argc, char** argv) {
             cout << "1 - Insertion sort" << endl;
             cout << "2 - Merge sort" << endl;
             cout << "3 - Bubble sort" << endl;
-            cout << "4 - Radix sort binary" << endl;
+            cout << "4 - Fastbit radix sort" << endl;
+            cout << "5 - American flag sort" << endl;
             break;
         case 2:
             cout << "1 - Find maximum sub array recursive" << endl;
@@ -49,10 +50,10 @@ int main(int argc, char** argv) {
 
                     int t = time(0);
 
-                    RadixSortBinary radixSortBinary = RadixSortBinary();
-                    radixSortBinary.sort(long_array, M);
+                    FastbitRadixSort fastbitRadixSort = FastbitRadixSort();
+                    fastbitRadixSort.sort(long_array, M);
 
-                    cout << "RadixSortBinary: " << time(0) - t << endl;
+                    cout << "FastbitRadixSort: " << time(0) - t << endl;
 
                     delete [] long_array;
                 }
@@ -72,8 +73,13 @@ int main(int argc, char** argv) {
                     break; 
                 }
                 case 4: {
-                    RadixSortBinary radixSortBinary = RadixSortBinary();
-                    radixSortBinary.sort(input, 25);
+                    FastbitRadixSort fastbitRadixSort = FastbitRadixSort();
+                    fastbitRadixSort.sort(input, 25);
+                    break;
+                }
+                case 5: {
+                    AmericanFlagSort americanFlagSort = AmericanFlagSort();
+                    americanFlagSort.sort(input, 25);
                     break;
                 }
             }
