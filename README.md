@@ -18,7 +18,10 @@ My goal is to improve my C++ skills and remain seasoned with regard to algorithm
 * Bubble sort
 * Insertion sort
 * Merge sort
-* Radix sort (in progress)
+* American Radix sort
+* Fastbit Radix sort
+* LSD Radix sort
+* Heap sort (in progress)
 
 ## questions
 

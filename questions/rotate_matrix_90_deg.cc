@@ -33,7 +33,7 @@
 
 using namespace std;
 
-void RotateMatrix90::process() {
+void RotateMatrix90::Process() {
 
     // init the input array
     size_t N = 4;
@@ -46,14 +46,14 @@ void RotateMatrix90::process() {
         }
     }
 
-    rotateMatrix90(input, N);
+    Rotate90(input, N);
     
 }
 
-void RotateMatrix90::rotateMatrix90(int **input, size_t N) {
+void RotateMatrix90::Rotate90(int **input, size_t N) {
     
     cout << "Input matrix" << endl;
-    printMatrix(input, N);
+    PrintMatrix(input, N);
 
     for (size_t i = 0; i < N/2; i++) {
         for (size_t j = i; j < N - i - 1; j++) {
@@ -67,11 +67,11 @@ void RotateMatrix90::rotateMatrix90(int **input, size_t N) {
         }
     }
 
-    printMatrix(input, N);
+    PrintMatrix(input, N);
 
 }
 
-void RotateMatrix90::printMatrix(int **input, size_t N) {
+void RotateMatrix90::PrintMatrix(int **input, size_t N) {
 
     for (size_t i = 0; i < N; i++) {
         for (size_t j = 0; j < N; j++) {

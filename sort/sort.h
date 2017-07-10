@@ -1,9 +1,9 @@
 #ifndef SORT_H
 #define SORT_H
 
-class Sort {
+class SortingAlgorithm {
     public:
-        virtual void sort(int input[], int size) = 0;
+        virtual void Sort(int input[], int size) = 0;
 };
 
 #endif

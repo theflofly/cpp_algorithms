@@ -4,7 +4,7 @@
 #include <climits>
 #include "sort/sort_algorithms.h"
 
-void BubbleSort::sort(int input[], int size) {
+void BubbleSort::Sort(int input[], int size) {
     
     // the smaller value is brought to the left part of the array during the (2) loop
     // the [0, i] array is sorted

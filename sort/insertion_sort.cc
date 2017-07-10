@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void InsertionSort::sort(int input[], int size) {
+void InsertionSort::Sort(int input[], int size) {
     
     for (int i = 1; i < size; i++) {
         int key = input[i];

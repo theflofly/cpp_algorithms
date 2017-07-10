@@ -5,27 +5,27 @@ using namespace std;
 
 class FindMaximumSubArrayRecursive {
     public:
-        void process();
+        void Process();
     private:
-        array<int, 3> findMaximumSubarray(array<int, 16> A, int low, int high);
-        array<int, 3> findMaxCrossingSubarray(array<int, 16> A, int low, int mid, int high);
-        void printProcessPartArray(array<int, 16> A, int low, int high, string markerL, string markerR);
+        array<int, 3> FindMaximumSubarray(array<int, 16> A, int low, int high);
+        array<int, 3> FindMaxCrossingSubarray(array<int, 16> A, int low, int mid, int high);
+        void PrintProcessPartArray(array<int, 16> A, int low, int high, string markerL, string markerR);
 };
 
 class RotateMatrix90 {
     public:
-        void process();
+        void Process();
     private:
-        void rotateMatrix90(int **input, size_t N);
-        void printMatrix(int **input, size_t N);
+        void Rotate90(int **input, size_t N);
+        void PrintMatrix(int **input, size_t N);
 };
 
 class RotateMatrixN {
     public:
-        void process();
+        void Process();
     private:
-        void rotateMatrixK(int **input, size_t N, int k);
-        void printMatrix(int **input, size_t N);
+        void RotateN(int **input, size_t N, int k);
+        void PrintMatrix(int **input, size_t N);
 };
 
 #endif

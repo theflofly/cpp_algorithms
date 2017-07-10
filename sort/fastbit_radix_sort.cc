@@ -10,13 +10,13 @@
 
 using namespace std;
 
-void FastbitRadixSort::sort(int input[], int size) {
+void FastbitRadixSort::Sort(int input[], int size) {
     
-    binarySplit(input, input + size - 1, 1 << 16);
+    BinarySplit(input, input + size - 1, 1 << 16);
 
 }
 
-void FastbitRadixSort::binarySplit(int *inputStart, int *inputEnd, int maxMask) {
+void FastbitRadixSort::BinarySplit(int *inputStart, int *inputEnd, int maxMask) {
 
     if (maxMask == 0) return;
 
@@ -45,7 +45,7 @@ void FastbitRadixSort::binarySplit(int *inputStart, int *inputEnd, int maxMask) 
             swap(*(start - 1), *inputStart);
         }
     } else if (((start - 1) - inputStart) > 1) {
-        binarySplit(inputStart, start - 1, maxMask >> 1);
+        BinarySplit(inputStart, start - 1, maxMask >> 1);
     }
 
     if (inputEnd - start == 1) {
@@ -53,6 +53,6 @@ void FastbitRadixSort::binarySplit(int *inputStart, int *inputEnd, int maxMask) 
             swap(*inputEnd, *start);
         }
     } else if (inputEnd - start > 1) {
-        binarySplit(start, inputEnd, maxMask >> 1);
+        BinarySplit(start, inputEnd, maxMask >> 1);
     }
 }

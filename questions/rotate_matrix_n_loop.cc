@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void RotateMatrixN::process() {
+void RotateMatrixN::Process() {
 
     // init the input array
     size_t N = 6;
@@ -22,14 +22,14 @@ void RotateMatrixN::process() {
     }
 
     // rotate of 10 elements
-    rotateMatrixK(input, N, 10);
+    RotateN(input, N, 10);
     
 }
 
-void RotateMatrixN::rotateMatrixK(int **input, size_t N, int k) {
+void RotateMatrixN::RotateN(int **input, size_t N, int k) {
     
     cout << "Input matrix" << endl;
-    printMatrix(input, N);
+    PrintMatrix(input, N);
 
     int circleNumber = N/2;
 
@@ -98,11 +98,11 @@ void RotateMatrixN::rotateMatrixK(int **input, size_t N, int k) {
 
     }
 
-    printMatrix(input, N);
+    PrintMatrix(input, N);
 
 }
 
-void RotateMatrixN::printMatrix(int **input, size_t N) {
+void RotateMatrixN::PrintMatrix(int **input, size_t N) {
 
     for (size_t i = 0; i < N; i++) {
         for (size_t j = 0; j < N; j++) {

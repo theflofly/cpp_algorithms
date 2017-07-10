@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void MergeSort::merge(int input[], int p, int q, int r) {
+void MergeSort::Merge(int input[], int p, int q, int r) {
     int n1 = q - p + 1; // +1 because the q element will go into the left array
     int n2 = r - q;
     int* L = new int[n1 + 1];
@@ -35,15 +35,15 @@ void MergeSort::merge(int input[], int p, int q, int r) {
     
 }
     
-void MergeSort::mergeSort(int input[], int p, int r) {
+void MergeSort::MergeSplit(int input[], int p, int r) {
     if (p < r) {
         int q = (p + r)/2;
-        mergeSort(input, p, q);
-        mergeSort(input, q + 1, r); // +1 because the element at q is processed with the left part
-        merge(input, p, q, r);
+        MergeSplit(input, p, q);
+        MergeSplit(input, q + 1, r); // +1 because the element at q is processed with the left part
+        Merge(input, p, q, r);
     }
 }
     
-void MergeSort::sort(int input[], int size) {
-    mergeSort(input, 0, size - 1);
+void MergeSort::Sort(int input[], int size) {
+    MergeSplit(input, 0, size - 1);
 }

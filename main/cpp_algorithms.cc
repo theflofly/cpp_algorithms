@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     int menu = 1;
-    int subMenu = 5;
+    int subMenu = 6;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -23,6 +23,7 @@ int main(int argc, char** argv) {
             cout << "3 - Bubble sort" << endl;
             cout << "4 - Fastbit radix sort" << endl;
             cout << "5 - American flag sort" << endl;
+            cout << "6 - LSD radix sort" << endl;
             break;
         case 2:
             cout << "1 - Find maximum sub array recursive" << endl;
@@ -50,36 +51,49 @@ int main(int argc, char** argv) {
 
                     int t = time(0);
 
-                    FastbitRadixSort fastbitRadixSort = FastbitRadixSort();
-                    fastbitRadixSort.sort(long_array, M);
+                    LSDRadixSort american_flag_sort = LSDRadixSort();
+                    american_flag_sort.Sort(long_array, M);
 
-                    cout << "FastbitRadixSort: " << time(0) - t << endl;
+                    cout << "AmericanFlagSort: " << time(0) - t << endl;
+
+                    int n = M - 1;
+                    while (n --> 0) {
+                        if (long_array[n] > long_array[n+1]) {
+                            cerr << "sorting failed" << endl;
+                            return 1;
+                        }
+                    }
 
                     delete [] long_array;
                 }
                 case 1: {
                     InsertionSort insertionSort = InsertionSort();
-                    insertionSort.sort(input, 25);
+                    insertionSort.Sort(input, 25);
                     break; 
                 }
                 case 2: {
                     MergeSort mergeSort = MergeSort();
-                    mergeSort.sort(input, 25);
+                    mergeSort.Sort(input, 25);
                     break; 
                 }
                 case 3: {
                     BubbleSort bubbleSort = BubbleSort();
-                    bubbleSort.sort(input, 25);
+                    bubbleSort.Sort(input, 25);
                     break; 
                 }
                 case 4: {
                     FastbitRadixSort fastbitRadixSort = FastbitRadixSort();
-                    fastbitRadixSort.sort(input, 25);
+                    fastbitRadixSort.Sort(input, 25);
                     break;
                 }
                 case 5: {
                     AmericanFlagSort americanFlagSort = AmericanFlagSort();
-                    americanFlagSort.sort(input, 25);
+                    americanFlagSort.Sort(input, 25);
+                    break;
+                }
+                case 6: {
+                    LSDRadixSort lsd_radix_sort = LSDRadixSort();
+                    lsd_radix_sort.Sort(input, 25);
                     break;
                 }
             }
@@ -88,16 +102,16 @@ int main(int argc, char** argv) {
             switch (subMenu) {
                 case 1: {
                     FindMaximumSubArrayRecursive fmsr = FindMaximumSubArrayRecursive();
-                    fmsr.process();
+                    fmsr.Process();
                     break; }
                 case 2: {
                     RotateMatrix90 rotateMatrix90 = RotateMatrix90();
-                    rotateMatrix90.process();
+                    rotateMatrix90.Process();
                     break;
                 }
                 case 3: {
                     RotateMatrixN rotateMatrixN = RotateMatrixN();
-                    rotateMatrixN.process();
+                    rotateMatrixN.Process();
                     break;
                 }
             }
