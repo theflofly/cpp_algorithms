@@ -7,8 +7,8 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    int menu = 1;
-    int subMenu = 6;
+    int menu = 2;
+    int subMenu = 4;
 
     cout << "1 - Sorting algorithm" << endl;
     cout << "2 - Interview question" << endl;
@@ -29,6 +29,7 @@ int main(int argc, char** argv) {
             cout << "1 - Find maximum sub array recursive" << endl;
             cout << "2 - Rotate a matrix by 90°" << endl;
             cout << "3 - Rotate a matrix by N loop" << endl;
+            cout << "4 - Blackjack" << endl;
             break;
     }
 
@@ -112,6 +113,11 @@ int main(int argc, char** argv) {
                 case 3: {
                     RotateMatrixN rotateMatrixN = RotateMatrixN();
                     rotateMatrixN.Process();
+                    break;
+                }
+                case 4: {
+                    BlackJack black_jack = BlackJack();
+                    black_jack.Process();
                     break;
                 }
             }

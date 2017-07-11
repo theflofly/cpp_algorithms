@@ -41,6 +41,7 @@
         "__mutex_base": "cpp",
         "chrono": "cpp",
         "__config": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "__tuple": "cpp"
     }
 }
