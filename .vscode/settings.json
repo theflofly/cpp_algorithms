@@ -42,6 +42,10 @@
         "chrono": "cpp",
         "__config": "cpp",
         "cstddef": "cpp",
-        "__tuple": "cpp"
+        "__tuple": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp"
     }
 }

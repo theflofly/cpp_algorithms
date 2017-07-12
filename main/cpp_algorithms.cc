@@ -126,6 +126,11 @@ int main(int argc, char** argv) {
                     bfs.Process();
                     break;
                 }
+                case 6: {
+                    DFS dfs = DFS();
+                    dfs.Process();
+                    break;
+                }
             }
             break; }
     }

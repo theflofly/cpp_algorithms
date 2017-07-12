@@ -1,6 +1,7 @@
 #ifndef QUESTION_H
 #define QUESTION_H
 
+#include <vector>
 #include <list>
 
 using namespace std;
@@ -74,13 +75,30 @@ class BFS {
     public:
         void Process();
 };
+
+class DFS {
+    public:
+        void Process();
+};
+
+class GraphDistance {
+    public:
+        int distance;
+        int predecessor;
+        GraphDistance() : distance(-1), predecessor(-1) {}
+};
+
 class Graph {
     int V;
+    bool *visited;
     list<int> *adj;
+    public:
+        vector<GraphDistance> distances;
 public:
     Graph(int V);
-    void addEdge(int v, int w);
+    void AddEdge(int v, int w);
     void BFS(int s);
+    void DFS(int s, int distance);
 };
 
 #endif

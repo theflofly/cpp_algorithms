@@ -29,6 +29,7 @@ My goal is to improve my C++ skills and remain seasoned with regard to algorithm
 * Matrix rotation 90°
 * Matrix rotation by k elements (with matrix to circle)
 * BFS
+* DFS
 
 # Build
 
