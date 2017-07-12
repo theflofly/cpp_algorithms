@@ -1,6 +1,8 @@
 #ifndef QUESTION_H
 #define QUESTION_H
 
+#include <list>
+
 using namespace std;
 
 class FindMaximumSubArrayRecursive {
@@ -66,6 +68,19 @@ class BlackJack {
         char GetPlayerChoice();
         bool PlayBlackJack(array<Card, 52> &deck);
         
+};
+
+class BFS {
+    public:
+        void Process();
+};
+class Graph {
+    int V;
+    list<int> *adj;
+public:
+    Graph(int V);
+    void addEdge(int v, int w);
+    void BFS(int s);
 };
 
 #endif
