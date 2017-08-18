@@ -6,8 +6,13 @@ cc_library(
         "rotate_matrix_n_loop.cc",
         "blackjack.cc",
         "bfs.cc",
-        "dfs.cc"
+        "dfs.cc",
+        "anagram_substring_search.cc"
         ], # make a globs here
     hdrs = ["questions.h"],
     visibility = ["//main:__pkg__"],
 )
+
+//TODO:
+* standalone each file
+* add algorithms from algorithm repository

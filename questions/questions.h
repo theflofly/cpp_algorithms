@@ -101,4 +101,9 @@ public:
     void DFS(int s, int distance);
 };
 
+class AnagramSubstringSearch {
+    public:
+        void Process();
+};
+
 #endif

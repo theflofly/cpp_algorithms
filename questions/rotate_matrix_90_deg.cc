@@ -29,11 +29,22 @@
 #include <array>
 #include <iostream>
 #include <climits>
-#include "questions.h"
 
 using namespace std;
 
-void RotateMatrix90::Process() {
+void PrintMatrix(int **input, size_t N) {
+
+    for (size_t i = 0; i <= N; i++) {
+        for (size_t j = 0; j <= N; j++) {
+            cout << input[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+
+}
+
+int main() {
 
     // init the input array
     size_t N = 4;
@@ -46,39 +57,23 @@ void RotateMatrix90::Process() {
         }
     }
 
-    Rotate90(input, N);
-    
-}
-
-void RotateMatrix90::Rotate90(int **input, size_t N) {
-    
-    cout << "Input matrix" << endl;
+    N = N - 1;
     PrintMatrix(input, N);
+    
+    for (int num_circle = 0; num_circle < N/2 + 1; num_circle++) {
 
-    for (size_t i = 0; i < N/2; i++) {
-        for (size_t j = i; j < N - i - 1; j++) {
-            
-            int buffer = input[i][j];
+        for (int index_circle = num_circle; index_circle < N - num_circle; index_circle++) {
 
-            input[i][j] = input[j][N - i - 1];
-            input[j][N - i - 1] = input[N - i - 1][N - j - 1];
-            input[N - i - 1][N - j - 1] = input[N - 1 - j][i];
-            input[N - 1 - j][i] = buffer;
+            int temp = input[num_circle][index_circle];
+            input[num_circle][index_circle] = input[N - index_circle][num_circle];
+            input[N - index_circle][num_circle] = input[N - num_circle][N - index_circle];
+            input[N - num_circle][N - index_circle] = input[index_circle][N - num_circle];
+            input[index_circle][N - num_circle] = temp;
+
         }
+
     }
 
     PrintMatrix(input, N);
-
 }
 
-void RotateMatrix90::PrintMatrix(int **input, size_t N) {
-
-    for (size_t i = 0; i < N; i++) {
-        for (size_t j = 0; j < N; j++) {
-            cout << input[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-
-}
